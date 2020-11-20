@@ -15,7 +15,7 @@ select ... where ...
 
 select ... where  ... and (... or...)
 
-select ... where ... order by colume
+select ... where ... order by columeName
 
 ```
 
@@ -65,6 +65,36 @@ FROM table_name
 WHERE ROWNUM <= number;
 ```
 
+
+
+## like
+
+通配符 %  ， 单一字符 _
+
+ %cc%  包含cc的所有的字符
+
+%c  以c结尾的
+
+c% 以c开头的
+
+## in
+
+IN 操作符允许您在 WHERE 子句中规定多个值。
+
+## between 
+
+BETWEEN 操作符选取介于两个值之间的数据范围内的值。这些值可以是数值、文本或者日期。
+
+```
+SELECT column_name(s)
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+```
+
+## 别名
+
+
+
 # 其他
 
 ## 指定时间与延时
@@ -79,6 +109,12 @@ WHERE ROWNUM <= number;
 
 ```
 WAITFOR DELAY '02:00';  '00:00:00.000' 指定时分秒毫秒后执行
+```
+
+### 查询隔离级别
+
+```sql server
+DBCC USEROPTIONS
 ```
 
 
