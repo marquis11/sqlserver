@@ -65,6 +65,16 @@ FROM table_name
 WHERE ROWNUM <= number;
 ```
 
+## count
+
+cont（） 求个数
+
+ count（*）求个数
+
+count（字段名）： 返回字段非空记录的个数，重复的记录也会被当有效
+
+cout（distinct 字段名）： 返回字段不重复并且非空的记录的个数
+
 
 
 ## like
