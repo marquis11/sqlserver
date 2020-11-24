@@ -69,7 +69,7 @@ WHERE ROWNUM <= number;
 
 cont（） 求个数
 
- count（*）求个数
+count（*）求个数
 
 count（字段名）： 返回字段非空记录的个数，重复的记录也会被当有效
 
@@ -105,13 +105,85 @@ WHERE column_name BETWEEN value1 AND value2;
 
 
 
-## 函数
+### 函数
+
+### avg()
+
+### count()
+
+### first() last()
+
+不同数据库不一样
+
+### max() MIN() SUM()
+
+聚合函数
 
 ### group by
 
+```
 select  column(group by 的) ，(其余字段要是聚合函数) from table  where 条件  group by  column
+```
+
+### having
+
+在 SQL 中增加 HAVING 子句原因是，WHERE 关键字无法与聚合函数一起使用。
+
+HAVING 子句可以让我们筛选分组后的各组数据。
+
+```
+SELECT 
+       count([Volume20GP])
+      ,count([Volume40GP])
+      ,count([Volume40HQ])
+      ,count([Income20GP])
+      ,count([Income40GP])
+      ,count([Income40HQ])
+      ,[blFileID]
+  FROM [IndexTest20201113].[dbo].[Future_BLData] where id between 1 and 1000 group by blfileId having count([Volume20GP]) > 400
+```
 
 
+
+### EXISTS
+
+EXISTS 运算符用于判断查询子句是否有记录，如果有一条或多条记录存在返回 True，否则返回 False。
+
+### UCASE() LCASE() 
+
+大小写
+
+### Mid（）
+
+sql server  使用的是 SUBSTRING（）
+
+```
+SELECT MID(column_name,start[,length]) FROM table_name;
+```
+
+|    参数     |                            描述                             |
+| :---------: | :---------------------------------------------------------: |
+| column_name |                  必需。要提取字符的字段。                   |
+|    start    |             必需。规定开始位置（起始值是 1）。              |
+|   length    | 可选。要返回的字符数。如果省略，则 MID() 函数返回剩余文本。 |
+
+### len
+
+### ROUND
+
+ROUND() 函数用于把数值字段舍入为指定的小数位数。
+
+```
+SELECT ROUND(column_name,decimals) FROM table_name;
+```
+
+### NOW()
+
+NOW() 函数返回当前系统的日期和时间。
+
+## ### FORMAT() 函数
+
+FORMAT() 函数用于对字段的显示进行格式化。
 
 
 
