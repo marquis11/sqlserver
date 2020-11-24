@@ -105,6 +105,16 @@ WHERE column_name BETWEEN value1 AND value2;
 
 
 
+## 函数
+
+### group by
+
+select  column(group by 的) ，(其余字段要是聚合函数) from table  where 条件  group by  column
+
+
+
+
+
 # 其他
 
 ## 指定时间与延时
