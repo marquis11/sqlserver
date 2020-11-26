@@ -105,7 +105,35 @@ WHERE column_name BETWEEN value1 AND value2;
 
 
 
-### 函数
+## 连接 join
+
+### inner join
+
+INNER JOIN 与 JOIN 是相同的。
+
+### left join
+
+LEFT JOIN 关键字从左表（table1）返回所有的行，即使右表（table2）中没有匹配。如果右表中没有匹配，则结果为 NULL。
+
+### RIGHT JOIN
+
+RIGHT JOIN 关键字从右表（table2）返回所有的行，即使左表（table1）中没有匹配。如果左表中没有匹配，则结果为 NULL。
+
+### FULL OUTER JOIN
+
+FULL OUTER JOIN 关键字只要左表（table1）和右表（table2）其中一个表中存在匹配，则返回行.
+
+FULL OUTER JOIN 关键字结合了 LEFT JOIN 和 RIGHT JOIN 的结果。
+
+## UNION 
+
+UNION 操作符用于合并两个或多个 SELECT 语句的结果集。
+
+请注意，UNION 内部的每个 SELECT 语句必须拥有**相同数量**的列。列也必须拥有相似的数据类型。
+
+同时，每个 SELECT 语句中的列的**顺序**必须相同...。
+
+## 函数
 
 ### avg()
 
@@ -181,7 +209,7 @@ SELECT ROUND(column_name,decimals) FROM table_name;
 
 NOW() 函数返回当前系统的日期和时间。
 
-## ### FORMAT() 函数
+### FORMAT() 函数
 
 FORMAT() 函数用于对字段的显示进行格式化。
 
